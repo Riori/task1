@@ -96,7 +96,7 @@ std::string cbc(std::string message, std::string key, std::string ivector)
     return ress.str();
 }
 
-std::string cfb(std::string message, std::string key, std::string iv)
+std::string cfb(std::string message, std::string key, std::string ivector)
 {
     std::vector<u32> mes;
     std::vector<u32> k;
@@ -130,7 +130,7 @@ std::string cfb(std::string message, std::string key, std::string iv)
     return ress.str();
 }
 
-std::string ofb(std::string message, std::string key, std::string iv)
+std::string ofb(std::string message, std::string key, std::string ivector)
 {
     std::vector<u32> mes;
     std::vector<u32> k;
