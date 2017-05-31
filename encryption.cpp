@@ -1,9 +1,9 @@
-#include "encryption.h"
+#include "encryption.hpp"
 
 #include <vector>
 #include <sstream>
 
-#include "cmake-build-debug/types.h"
+#include "types.h"
 
 u8 symbol_to_hex(char c)
 {
@@ -68,7 +68,7 @@ std::string cbc(std::string message, std::string key, std::string ivector)
     std::vector<u32> k;
     std::vector<u32> iv;
 
-    mes = string_to_block(mesage);
+    mes = string_to_block(message);
     k = string_to_block(key);
     iv = string_to_block(ivector);
 
@@ -102,7 +102,7 @@ std::string cfb(std::string message, std::string key, std::string iv)
     std::vector<u32> k;
     std::vector<u32> iv;
 
-    mes = string_to_block(mesage);
+    mes = string_to_block(message);
     k = string_to_block(key);
     iv = string_to_block(ivector);
 
@@ -136,7 +136,7 @@ std::string ofb(std::string message, std::string key, std::string iv)
     std::vector<u32> k;
     std::vector<u32> iv;
 
-    mes = string_to_block(mesage);
+    mes = string_to_block(message);
     k = string_to_block(key);
     iv = string_to_block(ivector);
 
