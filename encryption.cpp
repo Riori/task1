@@ -25,35 +25,35 @@ u8 symbol_to_hex(char c)
 std::vector<u32> string_to_block(std::string s)
 {
     std::stringstream ss(s);
-
+    
     std::vector<u8> digits;
     char cur_symbol;
-
+    
     while (ss >> cur_symbol)
     {
         digits.push_back(symbol_to_hex(cur_symbol));
     }
-
-    if(digits.size() % 4 != 0)
+    
+    if(digits.size() % 8 != 0)
         digits.push_back(0x8);
-
-    while (digits.size() % 4 != 0)
+    
+    while (digits.size() % 8 != 0)
     {
         digits.push_back(0x00);
     }
-
+    
     std::vector<u32> words;
-
+    
     for (int i=0; i<digits.size(); i+=8)
     {
         u32 res = 0;
         for (int j=0; j<8; ++j)
         {
-            res |= u32(digits[i+j]) << (32 - 2*(j+1));
+            res |= u32(digits[i+j]) << (32 - 4*(j+1));
         }
         words.push_back(res);
     }
-
+    
     return words;
 }
 
