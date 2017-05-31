@@ -1,0 +1,4 @@
+INPUT=a97f
+KEY=a97f
+IV=a97f
+MODE=CBC

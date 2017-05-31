@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/asya/CLionProjects/untitled1/main.cpp
+iostream
+-
+fstream
+-
+vector
+-
+stdexcept
+-
+algorithm
+-
+types.h
+/home/asya/CLionProjects/untitled1/types.h
+encryption.hpp
+/home/asya/CLionProjects/untitled1/encryption.hpp
+
+/home/asya/CLionProjects/untitled1/types.h
+stdint.h
+-
+
