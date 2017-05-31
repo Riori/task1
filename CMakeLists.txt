@@ -4,11 +4,15 @@ project(encrypt)
 set(CMAKE_CXX_STANDARD 11)
 
 set(HEADERS
-        encryption.h
+        encryption.hpp
         types.h
         )
+set(MODULES
+	encryption.cpp
+)
+
 set(SOURCE
         main.cpp
         )
 
-add_executable(encrypt ${SOURCE} ${HEADERS})
+add_executable(encrypt ${SOURCE} ${MODULES} ${HEADERS})
